@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Resume Builder</h1>
+
+        <!-- Resume Form -->
+        <form id="resumeForm">
+            <h2>Personal Info</h2>
+            <input type="text" id="name" placeholder="Full Name" required />
+            <input type="text" id="title" placeholder="Job Title" required />
+            <input type="email" id="email" placeholder="Email" required />
+            <input type="text" id="phone" placeholder="Phone Number" required />
+
+            <h2>Upload Profile Photo</h2>
+            <input type="file" id="photo" accept="image/*" />
+
+            <h2>Skills </h2>
+            <textarea id="skills" placeholder="HTML, CSS, JavaScript" required></textarea>
+
+            <!-- Work Experience Section -->
+            <h3>Work Experience</h3>
+            <div id="experienceContainer">
+                <div class="experience">
+                    <input type="text" placeholder="Job Role" class="jobRole" />
+                    <input type="text" placeholder="Company" class="company" />
+                    <input type="text" placeholder="Year" class="year" />
+                </div>
+            </div>
+            <button type="button" class="addBtn" onclick="addExperience()">+ Add More Experience</button>
+
+            <!-- Education Section -->
+            <h3>Education</h3>
+            <div id="educationContainer">
+                <div class="education">
+                    <input type="text" placeholder="Degree" class="degree" />
+                    <input type="text" placeholder="University" class="university" />
+                    <input type="text" placeholder="Year" class="year" />
+                </div>
+            </div>
+            <button type="button" class="addBtn" onclick="addEducation()">+ Add More Education</button>
+            <br /><br />
+            <button type="submit">Generate Resume</button>
+        </form>
+
+        <!-- Resume Preview -->
+        <div id="resumePreview" class="resume hidden">
+            <div class="resume-grid">
+                <!-- Left Column -->
+                <div class="left-column">
+                    <img id="previewPhoto" class="profile-photo hidden" alt="Profile Photo" />
+                    <h2 id="previewName"></h2>
+                    <p id="previewTitle"></p>
+                    <p id="previewEmail"></p>
+                    <p id="previewPhone"></p>
+
+                    <section>
+                        <h2>Skills</h2>
+                        <ul id="previewSkills"></ul>
+                    </section>
+                </div>
+
+                <!-- Right Column -->
+                <div class="right-column">
+                    <section>
+                        <h2>Work Experience</h2>
+                        <ul id="previewExperience"></ul>
+                    </section>
+
+                    <section>
+                        <h2>Education</h2>
+                        <ul id="previewEducation"></ul>
+                    </section>
+                </div>
+            </div>
+
+            <button id="downloadBtn">Download as PDF</button>
+        </div>
+    </div>
+
+    <!-- JS Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

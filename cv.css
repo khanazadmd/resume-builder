@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #a7b1a7;
+    margin: 0;
+    padding: 0;
+    color: #0d0101;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #01072d;
+}
+
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #4e644f;
+}
+
+form button {
+    background: #b20556;
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #8bb88f;
+}
+
+.addBtn {
+    margin-bottom: 15px;
+    background: #1518bd;
+}
+
+.addBtn:hover {
+    background: #0e110f;
+}
+
+.resume {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.resume-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+}
+
+.left-column {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.right-column {
+    padding: 15px;
+}
+
+.resume h2 {
+    color: #07bdb7;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #4f46e5;
+    padding-bottom: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+#downloadBtn {
+    margin-top: 20px;
+    background: #15ef65;
+    padding: 10px 15px;
+    border-radius: 6px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#downloadBtn:hover {
+    background: #15803d;
+}
+
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #4f46e5;
+}
+
+.experience,
+.education {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px dashed #ccc;
+    border-radius: 5px;
+    background: #fafafa;
+}
+
+.experience input,
+.education input {
+    flex: 1;
+    padding: 6px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .resume-grid {
+        grid-template-columns: 1fr;
+    }
+}
